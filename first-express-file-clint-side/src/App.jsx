@@ -15,13 +15,26 @@ function App() {
     });
   },[])
 
+
+  const handleAddForm=(e)=>{
+    e.preventDefault();
+    const form=e.target;
+    const name=form.name.value;
+    const email=form.email.value;
+
+    console.log(name,email)
+
+  }
+
+
+
   return (
     <>
       
       <h1>Users Managment</h1>
 
       <div>
-        <form >
+        <form onSubmit={handleAddForm}>
           <input type="text" name='name' />
           <br />
           <input type="email" name='email' />
