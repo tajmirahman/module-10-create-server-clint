@@ -19,6 +19,17 @@ function App() {
     <>
       
       <h1>Users Managment</h1>
+
+      <div>
+        <form >
+          <input type="text" name='name' />
+          <br />
+          <input type="email" name='email' />
+          <br />
+          <input type="submit" value="add user" />
+        </form>
+      </div>
+
       <h2>Total Users- {users.length}</h2>
       <div>
         {
