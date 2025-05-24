@@ -4,7 +4,7 @@ import './App.css'
 
 function App() {
 
-  const [user,setUser]=useState([]);
+  const [users,setUser]=useState([]);
 
   useEffect(()=>{
     fetch('http://localhost:5000/users')
@@ -19,7 +19,12 @@ function App() {
     <>
       
       <h1>Users Managment</h1>
-      <h2>Total Users- {user.length}</h2>
+      <h2>Total Users- {users.length}</h2>
+      <div>
+        {
+          users.map(user=> <p>{user.id}:{user.name}:{user.email}</p>)
+        }
+      </div>
       
     </>
   )
